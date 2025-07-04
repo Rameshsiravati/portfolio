@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramesh Siravati | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --text: #1f2937;
+      --header: linear-gradient(to right, #6366f1, #4f46e5);
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --glass: blur(10px);
+      --highlight: #4f46e5;
+    }
+    [data-theme="dark"] {
+      --bg: #111827;
+      --text: #f3f4f6;
+      --header: linear-gradient(to right, #2563eb, #1e3a8a);
+      --card-bg: rgba(45, 55, 72, 0.7);
+      --highlight: #93c5fd;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease-in-out;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--header);
+      color: white;
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .toggle-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: white;
+      color: #111;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .icons a {
+      margin: 0 0.5rem;
+      color: white;
+      font-size: 1.4rem;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .section {
+      margin: 2rem 0;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--highlight);
+      border-bottom: 2px solid var(--highlight);
+      display: inline-block;
+    }
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: var(--glass);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+    }
+    .card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .card a {
+      color: var(--highlight);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1f2937;
+      color: white;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+    <h1>Ramesh Siravati</h1>
+    <p>💻 Full Stack Developer | 🤖 AI/ML Enthusiast </p>
+    <div class="icons">
+      <a href="mailto:rameshsiravati2004@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/yourhandle" target="https://github.com/Rameshsiravati"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourhandle" target="https://www.linkedin.com/in/ramesh-siravati-14abb2280/"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="section">
+      <h2>About Me</h2>
+      <p>Hello! I'm a Computer Science student passionate about building responsive websites and intelligent applications. I enjoy solving problems and experimenting with new technologies to keep improving my skills.</p>
+    </section>
+
+    <section class="section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="card">💡 Java</div>
+        <div class="card">⚛️ React.js</div>
+        <div class="card">🌐 HTML/CSS/JS</div>
+         <div class="card">🔧 Git & GitHub</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <h3><i class="fas fa-robot"></i> AI Help Bot </h3>
+          <p>Developed a chatbot using NLP and API's.</p>
+          
+        </div>
+        <div class="card">
+          <h3><i class="fas fa-"></i> Water Distribution System </h3>
+          <p>Developed a Deep Learning Model that can detect the contaminated water using Random Forest and GNN Model.</p>
+          
+        </div>
+        <div class="card">
+          <h3>🌐 Portfolio Website</h3>
+          <p>Designed and developed a responsive personal portfolio with light/dark mode, showcasing projects and skills.</p>
+         
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:youremail@example.com">rameshsiravati2004@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourhandle" target="https://www.linkedin.com/in/ramesh-siravati-14abb2280/">https://www.linkedin.com/in/ramesh-siravati</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Ramesh. Built with ❤️ using HTML, CSS & JavaScript.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute(\"data-theme\");
+      const newTheme = currentTheme === \"dark\" ? \"light\" : \"dark\";
+      document.documentElement.setAttribute(\"data-theme\", newTheme);
+      localStorage.setItem(\"theme\", newTheme);
+    }
+    document.documentElement.setAttribute(\"data-theme\", localStorage.getItem(\"theme\") || \"light\");
+  </script>
+</body>
+</html>
